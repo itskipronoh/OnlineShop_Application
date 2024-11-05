@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <style>
+        #more-info {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<h1>About Us</h1>
+<p>Welcome to our online shop! We are dedicated to providing you with the best products and services. Our team works hard to ensure a seamless shopping experience for you. Thank you for choosing us!</p>
+<button id="show-more-btn">Show More</button>
+<div id="more-info">
+    <p>We started our journey in November,2024 and have been growing ever since. Our mission is to bring the best products to our customers at the most affordable prices. We value customer satisfaction above all and strive to improve our services continuously.</p>
+</div>
+<script>
+    document.getElementById('show-more-btn').addEventListener('click', function() {
+        const moreInfo = document.getElementById('more-info');
+        if (moreInfo.style.display === 'none') {
+            moreInfo.style.display = 'block';
+            this.textContent = 'Show Less';
+        } else {
+            moreInfo.style.display = 'none';
+            this.textContent = 'Show More';
+        }
+    });
+</script>
+</body>
+</html>
