@@ -1,15 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-    <link rel="stylesheet" href="../../static/style/style.css">
+{% extends 'base.html' %}
 
-</head>
-<body>
-<h1> Welcome to online shop </h1>
+{% block content %}
+{% load static %}
 
-<p>Welcome to our online shop! Here, you can find a wide variety of products to suit your needs. Enjoy a seamless shopping experience with our user-friendly interface and secure payment options. Happy shopping!</p>
+<div class="container mt-5">
+    <h1>Welcome to ABZ onlineShop</h1>
 
-</body>
-</html>
+    <div class="row">
+        <div class="col-md-4">
+            <img src="{% static 'images/image1.jpg' %}" class="img-fluid" alt="Image 1">
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'images/image2.jpg' %}" class="img-fluid" alt="Image 2">
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'images/image3.jpg' %}" class="img-fluid" alt="Image 3">
+        </div>
+    </div>
+
+    <p class="mt-4">Welcome to our online shop! Here, you can find a wide variety of products to suit your needs. Enjoy a seamless shopping experience with our user-friendly interface and secure payment options. Happy shopping!</p>
+
+    <div class="jumbotron mt-4 text-center">
+        <h1 class="display-4">Hello, shoppers!</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </div>
+</div>
+
+{% endblock %}
