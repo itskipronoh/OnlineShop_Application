@@ -3,30 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <title>About Us</title>
-    <style>
-        #more-info {
-            display: none;
-        }
-    </style>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style/bootstrap/css/bootstrap.min.css' %}">
 </head>
 <body>
-<h1>About Us</h1>
-<p>Welcome to our online shop! We are dedicated to providing you with the best products and services. Our team works hard to ensure a seamless shopping experience for you. Thank you for choosing us!</p>
-<button id="show-more-btn">Show More</button>
-<div id="more-info">
-    <p>We started our journey in November,2024 and have been growing ever since. Our mission is to bring the best products to our customers at the most affordable prices. We value customer satisfaction above all and strive to improve our services continuously.</p>
+<header>
+  <nav class="navbar navbar-expand-lg bg-warning">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">ABZ OnlineShop</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">About us</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Contact Us</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+</header>
+
+<div class="container mt-5">
+    <h1>About Us</h1>
+    <p>Welcome to our online shop! We are dedicated to providing you with the best products and services. Our team works hard to ensure a seamless shopping experience for you. Thank you for choosing us!</p>
+    <img src="{% static 'images/aboutus.jpg' %}" class="img-fluid rounded" alt="About Us Image">
+    <button class="btn btn-primary mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#more-info" aria-expanded="false" aria-controls="more-info">
+        Show More
+    </button>
+    <div class="collapse mt-3" id="more-info">
+        <p>We started our journey in November, 2024 and have been growing ever since. Our mission is to bring the best products to our customers at the most affordable prices. We value customer satisfaction above all and strive to improve our services continuously.</p>
+    </div>
+    <button class="btn btn-success mt-3">Subscribe to the Newsletter</button>
 </div>
-<script>
-    document.getElementById('show-more-btn').addEventListener('click', function() {
-        const moreInfo = document.getElementById('more-info');
-        if (moreInfo.style.display === 'none') {
-            moreInfo.style.display = 'block';
-            this.textContent = 'Show Less';
-        } else {
-            moreInfo.style.display = 'none';
-            this.textContent = 'Show More';
-        }
-    });
-</script>
+
+<footer class="mt-5">
+    <p>© 2024 ABZ onlineShop@All Rights Reserved.</p>
+    <p>Contact: <a href="mailto:abzonline@info.com"><strong>abzonline@info.com</strong></a></p>
+</footer>
+
+<script src="{% static 'style/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>

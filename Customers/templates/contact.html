@@ -1,40 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Contact Us</title>
-<!--    <style>-->
-<!--        body {-->
-<!--            font-family: Arial, sans-serif;-->
-<!--        }-->
-<!--        .container {-->
-<!--            max-width: 800px;-->
-<!--            margin: 0 auto;-->
-<!--            padding: 20px;-->
-<!--        }-->
-<!--        h1 {-->
-<!--            text-align: center;-->
-<!--        }-->
-<!--        .contact-details, .map {-->
-<!--            margin-top: 20px;-->
-<!--        }-->
-<!--        .map iframe {-->
-<!--            width: 100%;-->
-<!--            height: 400px;-->
-<!--            border: 0;-->
-<!--        }-->
-<!--    </style>-->
-</head>
-<body>
+<!-- contact.html -->
+{% extends 'base.html' %}
 
-    <h1>Contact Us</h1>
-  <p>Welcome to our online shop! We are dedicated to providing you with the best products and services. Our team works hard to ensure a seamless shopping experience for you. Thank you for choosing us!</p>
+{% block title %}Contact Us{% endblock %}
 
-        <h2>Our Office</h2>
-        <p>Address: 123 Nairobi Street, Nairobi, Kenya</p>
-        <p>Phone: +254 700 000 000</p>
-        <p>Email: info@onlineshop.com</p>
+{% block content %}
+    <h1>Register form</h1>
+<!--    <p>Welcome to our online shop! We are dedicated to providing you with the best products and services. Our team works hard to ensure a seamless shopping experience for you. Thank you for choosing us!</p>-->
 
+<!--    <h2>Our Office</h2>-->
+<!--    <p>Address: 123 Nairobi Street, Nairobi, Kenya</p>-->
+<!--    <p>Phone: +254 700 000 000</p>-->
+<!--    <p>Email: info@onlineshop.com</p>-->
+<div class="row">
+    <div class="col-md-3"></div>
+       <div class="col-md-6">
+    <form method="post" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
 
-</body>
-</html>
+    <button type="submit" class="btn btn-warning btn-block">Submit</button>
+
+    </form>
+</div>
+{% endblock %}
