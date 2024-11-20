@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Customers'
+'Customers',  # Ensure this is correctly spelled
+    'django_daraja',
+    # 'Customers'
+    # 'django_daraja',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +131,17 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MPESA_ENVIRONMENT = 'sandbox'
+MPESA_CONSUMER_KEY = 'q6lOMza3HhSPgxPEdcmRfVhmqtgeN1ajfRoeHAl3Gy4jcHjs'
+MPESA_CONSUMER_SECRET = 'hiIrGepS4xrFJnKtdijHuQiCa5QBOtvoP5GqITiTUdTANedkwXjanQmdTCo0bxRc'
+MPESA_SHORTCODE = '174379'
+MPESA_EXPRESS_SHORTCODE = '174379'
+MPESA_SHORTCODE_TYPE = 'paybill'
+MPESA_PASSKEY = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919'
+MPESA_INITIATOR_USERNAME = 'testapi'
+MPESA_INITIATOR_PASSWORD = 'Safaricom999!*!'
+# MPESA_SECURITY_CREDENTIALs = 'YOUR_SECURITY'
+MPESA_PARTY_A = '600977'
+MPESA_PARTY_B = '600000'
+
